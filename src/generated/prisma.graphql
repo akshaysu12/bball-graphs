@@ -1,0 +1,1578 @@
+type AggregateBoxScoreAdvanced {
+  count: Int!
+}
+
+type AggregateBoxScoreTraditional {
+  count: Int!
+}
+
+type AggregateGame {
+  count: Int!
+}
+
+type AggregatePlayer {
+  count: Int!
+}
+
+type AggregateTeam {
+  count: Int!
+}
+
+type BatchPayload {
+  count: Long!
+}
+
+type BoxScoreAdvanced {
+  id: ID!
+  game: Game!
+  offensiveRating: Float
+  defensiveRating: Float
+  netRating: Float
+  assistPercentage: Float
+  assistToTurnovers: Float
+  assistRatio: Float
+  offensiveReboundPercentage: Float
+  defensiveReboundPercentage: Float
+  reboundPercentage: Float
+  effectiveFieldGoalPercentage: Float
+  trueShootingPercentage: Float
+  usagePercentage: Float
+  pace: Float
+  PIE: Float
+}
+
+type BoxScoreAdvancedConnection {
+  pageInfo: PageInfo!
+  edges: [BoxScoreAdvancedEdge]!
+  aggregate: AggregateBoxScoreAdvanced!
+}
+
+input BoxScoreAdvancedCreateInput {
+  game: GameCreateOneWithoutBoxScoreAdvancedInput!
+  offensiveRating: Float
+  defensiveRating: Float
+  netRating: Float
+  assistPercentage: Float
+  assistToTurnovers: Float
+  assistRatio: Float
+  offensiveReboundPercentage: Float
+  defensiveReboundPercentage: Float
+  reboundPercentage: Float
+  effectiveFieldGoalPercentage: Float
+  trueShootingPercentage: Float
+  usagePercentage: Float
+  pace: Float
+  PIE: Float
+}
+
+input BoxScoreAdvancedCreateOneWithoutGameInput {
+  create: BoxScoreAdvancedCreateWithoutGameInput
+  connect: BoxScoreAdvancedWhereUniqueInput
+}
+
+input BoxScoreAdvancedCreateWithoutGameInput {
+  offensiveRating: Float
+  defensiveRating: Float
+  netRating: Float
+  assistPercentage: Float
+  assistToTurnovers: Float
+  assistRatio: Float
+  offensiveReboundPercentage: Float
+  defensiveReboundPercentage: Float
+  reboundPercentage: Float
+  effectiveFieldGoalPercentage: Float
+  trueShootingPercentage: Float
+  usagePercentage: Float
+  pace: Float
+  PIE: Float
+}
+
+type BoxScoreAdvancedEdge {
+  node: BoxScoreAdvanced!
+  cursor: String!
+}
+
+enum BoxScoreAdvancedOrderByInput {
+  id_ASC
+  id_DESC
+  offensiveRating_ASC
+  offensiveRating_DESC
+  defensiveRating_ASC
+  defensiveRating_DESC
+  netRating_ASC
+  netRating_DESC
+  assistPercentage_ASC
+  assistPercentage_DESC
+  assistToTurnovers_ASC
+  assistToTurnovers_DESC
+  assistRatio_ASC
+  assistRatio_DESC
+  offensiveReboundPercentage_ASC
+  offensiveReboundPercentage_DESC
+  defensiveReboundPercentage_ASC
+  defensiveReboundPercentage_DESC
+  reboundPercentage_ASC
+  reboundPercentage_DESC
+  effectiveFieldGoalPercentage_ASC
+  effectiveFieldGoalPercentage_DESC
+  trueShootingPercentage_ASC
+  trueShootingPercentage_DESC
+  usagePercentage_ASC
+  usagePercentage_DESC
+  pace_ASC
+  pace_DESC
+  PIE_ASC
+  PIE_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type BoxScoreAdvancedPreviousValues {
+  id: ID!
+  offensiveRating: Float
+  defensiveRating: Float
+  netRating: Float
+  assistPercentage: Float
+  assistToTurnovers: Float
+  assistRatio: Float
+  offensiveReboundPercentage: Float
+  defensiveReboundPercentage: Float
+  reboundPercentage: Float
+  effectiveFieldGoalPercentage: Float
+  trueShootingPercentage: Float
+  usagePercentage: Float
+  pace: Float
+  PIE: Float
+}
+
+type BoxScoreAdvancedSubscriptionPayload {
+  mutation: MutationType!
+  node: BoxScoreAdvanced
+  updatedFields: [String!]
+  previousValues: BoxScoreAdvancedPreviousValues
+}
+
+input BoxScoreAdvancedSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: BoxScoreAdvancedWhereInput
+  AND: [BoxScoreAdvancedSubscriptionWhereInput!]
+  OR: [BoxScoreAdvancedSubscriptionWhereInput!]
+  NOT: [BoxScoreAdvancedSubscriptionWhereInput!]
+}
+
+input BoxScoreAdvancedUpdateInput {
+  game: GameUpdateOneRequiredWithoutBoxScoreAdvancedInput
+  offensiveRating: Float
+  defensiveRating: Float
+  netRating: Float
+  assistPercentage: Float
+  assistToTurnovers: Float
+  assistRatio: Float
+  offensiveReboundPercentage: Float
+  defensiveReboundPercentage: Float
+  reboundPercentage: Float
+  effectiveFieldGoalPercentage: Float
+  trueShootingPercentage: Float
+  usagePercentage: Float
+  pace: Float
+  PIE: Float
+}
+
+input BoxScoreAdvancedUpdateOneWithoutGameInput {
+  create: BoxScoreAdvancedCreateWithoutGameInput
+  update: BoxScoreAdvancedUpdateWithoutGameDataInput
+  upsert: BoxScoreAdvancedUpsertWithoutGameInput
+  delete: Boolean
+  disconnect: Boolean
+  connect: BoxScoreAdvancedWhereUniqueInput
+}
+
+input BoxScoreAdvancedUpdateWithoutGameDataInput {
+  offensiveRating: Float
+  defensiveRating: Float
+  netRating: Float
+  assistPercentage: Float
+  assistToTurnovers: Float
+  assistRatio: Float
+  offensiveReboundPercentage: Float
+  defensiveReboundPercentage: Float
+  reboundPercentage: Float
+  effectiveFieldGoalPercentage: Float
+  trueShootingPercentage: Float
+  usagePercentage: Float
+  pace: Float
+  PIE: Float
+}
+
+input BoxScoreAdvancedUpsertWithoutGameInput {
+  update: BoxScoreAdvancedUpdateWithoutGameDataInput!
+  create: BoxScoreAdvancedCreateWithoutGameInput!
+}
+
+input BoxScoreAdvancedWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  game: GameWhereInput
+  offensiveRating: Float
+  offensiveRating_not: Float
+  offensiveRating_in: [Float!]
+  offensiveRating_not_in: [Float!]
+  offensiveRating_lt: Float
+  offensiveRating_lte: Float
+  offensiveRating_gt: Float
+  offensiveRating_gte: Float
+  defensiveRating: Float
+  defensiveRating_not: Float
+  defensiveRating_in: [Float!]
+  defensiveRating_not_in: [Float!]
+  defensiveRating_lt: Float
+  defensiveRating_lte: Float
+  defensiveRating_gt: Float
+  defensiveRating_gte: Float
+  netRating: Float
+  netRating_not: Float
+  netRating_in: [Float!]
+  netRating_not_in: [Float!]
+  netRating_lt: Float
+  netRating_lte: Float
+  netRating_gt: Float
+  netRating_gte: Float
+  assistPercentage: Float
+  assistPercentage_not: Float
+  assistPercentage_in: [Float!]
+  assistPercentage_not_in: [Float!]
+  assistPercentage_lt: Float
+  assistPercentage_lte: Float
+  assistPercentage_gt: Float
+  assistPercentage_gte: Float
+  assistToTurnovers: Float
+  assistToTurnovers_not: Float
+  assistToTurnovers_in: [Float!]
+  assistToTurnovers_not_in: [Float!]
+  assistToTurnovers_lt: Float
+  assistToTurnovers_lte: Float
+  assistToTurnovers_gt: Float
+  assistToTurnovers_gte: Float
+  assistRatio: Float
+  assistRatio_not: Float
+  assistRatio_in: [Float!]
+  assistRatio_not_in: [Float!]
+  assistRatio_lt: Float
+  assistRatio_lte: Float
+  assistRatio_gt: Float
+  assistRatio_gte: Float
+  offensiveReboundPercentage: Float
+  offensiveReboundPercentage_not: Float
+  offensiveReboundPercentage_in: [Float!]
+  offensiveReboundPercentage_not_in: [Float!]
+  offensiveReboundPercentage_lt: Float
+  offensiveReboundPercentage_lte: Float
+  offensiveReboundPercentage_gt: Float
+  offensiveReboundPercentage_gte: Float
+  defensiveReboundPercentage: Float
+  defensiveReboundPercentage_not: Float
+  defensiveReboundPercentage_in: [Float!]
+  defensiveReboundPercentage_not_in: [Float!]
+  defensiveReboundPercentage_lt: Float
+  defensiveReboundPercentage_lte: Float
+  defensiveReboundPercentage_gt: Float
+  defensiveReboundPercentage_gte: Float
+  reboundPercentage: Float
+  reboundPercentage_not: Float
+  reboundPercentage_in: [Float!]
+  reboundPercentage_not_in: [Float!]
+  reboundPercentage_lt: Float
+  reboundPercentage_lte: Float
+  reboundPercentage_gt: Float
+  reboundPercentage_gte: Float
+  effectiveFieldGoalPercentage: Float
+  effectiveFieldGoalPercentage_not: Float
+  effectiveFieldGoalPercentage_in: [Float!]
+  effectiveFieldGoalPercentage_not_in: [Float!]
+  effectiveFieldGoalPercentage_lt: Float
+  effectiveFieldGoalPercentage_lte: Float
+  effectiveFieldGoalPercentage_gt: Float
+  effectiveFieldGoalPercentage_gte: Float
+  trueShootingPercentage: Float
+  trueShootingPercentage_not: Float
+  trueShootingPercentage_in: [Float!]
+  trueShootingPercentage_not_in: [Float!]
+  trueShootingPercentage_lt: Float
+  trueShootingPercentage_lte: Float
+  trueShootingPercentage_gt: Float
+  trueShootingPercentage_gte: Float
+  usagePercentage: Float
+  usagePercentage_not: Float
+  usagePercentage_in: [Float!]
+  usagePercentage_not_in: [Float!]
+  usagePercentage_lt: Float
+  usagePercentage_lte: Float
+  usagePercentage_gt: Float
+  usagePercentage_gte: Float
+  pace: Float
+  pace_not: Float
+  pace_in: [Float!]
+  pace_not_in: [Float!]
+  pace_lt: Float
+  pace_lte: Float
+  pace_gt: Float
+  pace_gte: Float
+  PIE: Float
+  PIE_not: Float
+  PIE_in: [Float!]
+  PIE_not_in: [Float!]
+  PIE_lt: Float
+  PIE_lte: Float
+  PIE_gt: Float
+  PIE_gte: Float
+  AND: [BoxScoreAdvancedWhereInput!]
+  OR: [BoxScoreAdvancedWhereInput!]
+  NOT: [BoxScoreAdvancedWhereInput!]
+}
+
+input BoxScoreAdvancedWhereUniqueInput {
+  id: ID
+}
+
+type BoxScoreTraditional {
+  id: ID!
+  game: Game!
+  points: Int!
+  minutes: Float!
+  fieldGoalsMade: Int!
+  fieldGoalsAttempted: Int!
+  fieldGoalPercentage: Float!
+  threePtsMade: Int!
+  threePtsAttempted: Int!
+  threePtPercentage: Float!
+  freeThrowsMade: Int!
+  freeThrowsAttempts: Int!
+  freeThrowsPercentage: Float!
+  rebounds: Int!
+  offensiveRebounds: Int!
+  defensiveRebounds: Int!
+  assists: Int!
+  steals: Int!
+  blocks: Int!
+  turnovers: Int!
+  plusMinus: Int!
+}
+
+type BoxScoreTraditionalConnection {
+  pageInfo: PageInfo!
+  edges: [BoxScoreTraditionalEdge]!
+  aggregate: AggregateBoxScoreTraditional!
+}
+
+input BoxScoreTraditionalCreateInput {
+  game: GameCreateOneWithoutBoxScoreTraditionalInput!
+  points: Int!
+  minutes: Float!
+  fieldGoalsMade: Int!
+  fieldGoalsAttempted: Int!
+  fieldGoalPercentage: Float!
+  threePtsMade: Int!
+  threePtsAttempted: Int!
+  threePtPercentage: Float!
+  freeThrowsMade: Int!
+  freeThrowsAttempts: Int!
+  freeThrowsPercentage: Float!
+  rebounds: Int!
+  offensiveRebounds: Int!
+  defensiveRebounds: Int!
+  assists: Int!
+  steals: Int!
+  blocks: Int!
+  turnovers: Int!
+  plusMinus: Int!
+}
+
+input BoxScoreTraditionalCreateOneWithoutGameInput {
+  create: BoxScoreTraditionalCreateWithoutGameInput
+  connect: BoxScoreTraditionalWhereUniqueInput
+}
+
+input BoxScoreTraditionalCreateWithoutGameInput {
+  points: Int!
+  minutes: Float!
+  fieldGoalsMade: Int!
+  fieldGoalsAttempted: Int!
+  fieldGoalPercentage: Float!
+  threePtsMade: Int!
+  threePtsAttempted: Int!
+  threePtPercentage: Float!
+  freeThrowsMade: Int!
+  freeThrowsAttempts: Int!
+  freeThrowsPercentage: Float!
+  rebounds: Int!
+  offensiveRebounds: Int!
+  defensiveRebounds: Int!
+  assists: Int!
+  steals: Int!
+  blocks: Int!
+  turnovers: Int!
+  plusMinus: Int!
+}
+
+type BoxScoreTraditionalEdge {
+  node: BoxScoreTraditional!
+  cursor: String!
+}
+
+enum BoxScoreTraditionalOrderByInput {
+  id_ASC
+  id_DESC
+  points_ASC
+  points_DESC
+  minutes_ASC
+  minutes_DESC
+  fieldGoalsMade_ASC
+  fieldGoalsMade_DESC
+  fieldGoalsAttempted_ASC
+  fieldGoalsAttempted_DESC
+  fieldGoalPercentage_ASC
+  fieldGoalPercentage_DESC
+  threePtsMade_ASC
+  threePtsMade_DESC
+  threePtsAttempted_ASC
+  threePtsAttempted_DESC
+  threePtPercentage_ASC
+  threePtPercentage_DESC
+  freeThrowsMade_ASC
+  freeThrowsMade_DESC
+  freeThrowsAttempts_ASC
+  freeThrowsAttempts_DESC
+  freeThrowsPercentage_ASC
+  freeThrowsPercentage_DESC
+  rebounds_ASC
+  rebounds_DESC
+  offensiveRebounds_ASC
+  offensiveRebounds_DESC
+  defensiveRebounds_ASC
+  defensiveRebounds_DESC
+  assists_ASC
+  assists_DESC
+  steals_ASC
+  steals_DESC
+  blocks_ASC
+  blocks_DESC
+  turnovers_ASC
+  turnovers_DESC
+  plusMinus_ASC
+  plusMinus_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type BoxScoreTraditionalPreviousValues {
+  id: ID!
+  points: Int!
+  minutes: Float!
+  fieldGoalsMade: Int!
+  fieldGoalsAttempted: Int!
+  fieldGoalPercentage: Float!
+  threePtsMade: Int!
+  threePtsAttempted: Int!
+  threePtPercentage: Float!
+  freeThrowsMade: Int!
+  freeThrowsAttempts: Int!
+  freeThrowsPercentage: Float!
+  rebounds: Int!
+  offensiveRebounds: Int!
+  defensiveRebounds: Int!
+  assists: Int!
+  steals: Int!
+  blocks: Int!
+  turnovers: Int!
+  plusMinus: Int!
+}
+
+type BoxScoreTraditionalSubscriptionPayload {
+  mutation: MutationType!
+  node: BoxScoreTraditional
+  updatedFields: [String!]
+  previousValues: BoxScoreTraditionalPreviousValues
+}
+
+input BoxScoreTraditionalSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: BoxScoreTraditionalWhereInput
+  AND: [BoxScoreTraditionalSubscriptionWhereInput!]
+  OR: [BoxScoreTraditionalSubscriptionWhereInput!]
+  NOT: [BoxScoreTraditionalSubscriptionWhereInput!]
+}
+
+input BoxScoreTraditionalUpdateInput {
+  game: GameUpdateOneRequiredWithoutBoxScoreTraditionalInput
+  points: Int
+  minutes: Float
+  fieldGoalsMade: Int
+  fieldGoalsAttempted: Int
+  fieldGoalPercentage: Float
+  threePtsMade: Int
+  threePtsAttempted: Int
+  threePtPercentage: Float
+  freeThrowsMade: Int
+  freeThrowsAttempts: Int
+  freeThrowsPercentage: Float
+  rebounds: Int
+  offensiveRebounds: Int
+  defensiveRebounds: Int
+  assists: Int
+  steals: Int
+  blocks: Int
+  turnovers: Int
+  plusMinus: Int
+}
+
+input BoxScoreTraditionalUpdateOneWithoutGameInput {
+  create: BoxScoreTraditionalCreateWithoutGameInput
+  update: BoxScoreTraditionalUpdateWithoutGameDataInput
+  upsert: BoxScoreTraditionalUpsertWithoutGameInput
+  delete: Boolean
+  disconnect: Boolean
+  connect: BoxScoreTraditionalWhereUniqueInput
+}
+
+input BoxScoreTraditionalUpdateWithoutGameDataInput {
+  points: Int
+  minutes: Float
+  fieldGoalsMade: Int
+  fieldGoalsAttempted: Int
+  fieldGoalPercentage: Float
+  threePtsMade: Int
+  threePtsAttempted: Int
+  threePtPercentage: Float
+  freeThrowsMade: Int
+  freeThrowsAttempts: Int
+  freeThrowsPercentage: Float
+  rebounds: Int
+  offensiveRebounds: Int
+  defensiveRebounds: Int
+  assists: Int
+  steals: Int
+  blocks: Int
+  turnovers: Int
+  plusMinus: Int
+}
+
+input BoxScoreTraditionalUpsertWithoutGameInput {
+  update: BoxScoreTraditionalUpdateWithoutGameDataInput!
+  create: BoxScoreTraditionalCreateWithoutGameInput!
+}
+
+input BoxScoreTraditionalWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  game: GameWhereInput
+  points: Int
+  points_not: Int
+  points_in: [Int!]
+  points_not_in: [Int!]
+  points_lt: Int
+  points_lte: Int
+  points_gt: Int
+  points_gte: Int
+  minutes: Float
+  minutes_not: Float
+  minutes_in: [Float!]
+  minutes_not_in: [Float!]
+  minutes_lt: Float
+  minutes_lte: Float
+  minutes_gt: Float
+  minutes_gte: Float
+  fieldGoalsMade: Int
+  fieldGoalsMade_not: Int
+  fieldGoalsMade_in: [Int!]
+  fieldGoalsMade_not_in: [Int!]
+  fieldGoalsMade_lt: Int
+  fieldGoalsMade_lte: Int
+  fieldGoalsMade_gt: Int
+  fieldGoalsMade_gte: Int
+  fieldGoalsAttempted: Int
+  fieldGoalsAttempted_not: Int
+  fieldGoalsAttempted_in: [Int!]
+  fieldGoalsAttempted_not_in: [Int!]
+  fieldGoalsAttempted_lt: Int
+  fieldGoalsAttempted_lte: Int
+  fieldGoalsAttempted_gt: Int
+  fieldGoalsAttempted_gte: Int
+  fieldGoalPercentage: Float
+  fieldGoalPercentage_not: Float
+  fieldGoalPercentage_in: [Float!]
+  fieldGoalPercentage_not_in: [Float!]
+  fieldGoalPercentage_lt: Float
+  fieldGoalPercentage_lte: Float
+  fieldGoalPercentage_gt: Float
+  fieldGoalPercentage_gte: Float
+  threePtsMade: Int
+  threePtsMade_not: Int
+  threePtsMade_in: [Int!]
+  threePtsMade_not_in: [Int!]
+  threePtsMade_lt: Int
+  threePtsMade_lte: Int
+  threePtsMade_gt: Int
+  threePtsMade_gte: Int
+  threePtsAttempted: Int
+  threePtsAttempted_not: Int
+  threePtsAttempted_in: [Int!]
+  threePtsAttempted_not_in: [Int!]
+  threePtsAttempted_lt: Int
+  threePtsAttempted_lte: Int
+  threePtsAttempted_gt: Int
+  threePtsAttempted_gte: Int
+  threePtPercentage: Float
+  threePtPercentage_not: Float
+  threePtPercentage_in: [Float!]
+  threePtPercentage_not_in: [Float!]
+  threePtPercentage_lt: Float
+  threePtPercentage_lte: Float
+  threePtPercentage_gt: Float
+  threePtPercentage_gte: Float
+  freeThrowsMade: Int
+  freeThrowsMade_not: Int
+  freeThrowsMade_in: [Int!]
+  freeThrowsMade_not_in: [Int!]
+  freeThrowsMade_lt: Int
+  freeThrowsMade_lte: Int
+  freeThrowsMade_gt: Int
+  freeThrowsMade_gte: Int
+  freeThrowsAttempts: Int
+  freeThrowsAttempts_not: Int
+  freeThrowsAttempts_in: [Int!]
+  freeThrowsAttempts_not_in: [Int!]
+  freeThrowsAttempts_lt: Int
+  freeThrowsAttempts_lte: Int
+  freeThrowsAttempts_gt: Int
+  freeThrowsAttempts_gte: Int
+  freeThrowsPercentage: Float
+  freeThrowsPercentage_not: Float
+  freeThrowsPercentage_in: [Float!]
+  freeThrowsPercentage_not_in: [Float!]
+  freeThrowsPercentage_lt: Float
+  freeThrowsPercentage_lte: Float
+  freeThrowsPercentage_gt: Float
+  freeThrowsPercentage_gte: Float
+  rebounds: Int
+  rebounds_not: Int
+  rebounds_in: [Int!]
+  rebounds_not_in: [Int!]
+  rebounds_lt: Int
+  rebounds_lte: Int
+  rebounds_gt: Int
+  rebounds_gte: Int
+  offensiveRebounds: Int
+  offensiveRebounds_not: Int
+  offensiveRebounds_in: [Int!]
+  offensiveRebounds_not_in: [Int!]
+  offensiveRebounds_lt: Int
+  offensiveRebounds_lte: Int
+  offensiveRebounds_gt: Int
+  offensiveRebounds_gte: Int
+  defensiveRebounds: Int
+  defensiveRebounds_not: Int
+  defensiveRebounds_in: [Int!]
+  defensiveRebounds_not_in: [Int!]
+  defensiveRebounds_lt: Int
+  defensiveRebounds_lte: Int
+  defensiveRebounds_gt: Int
+  defensiveRebounds_gte: Int
+  assists: Int
+  assists_not: Int
+  assists_in: [Int!]
+  assists_not_in: [Int!]
+  assists_lt: Int
+  assists_lte: Int
+  assists_gt: Int
+  assists_gte: Int
+  steals: Int
+  steals_not: Int
+  steals_in: [Int!]
+  steals_not_in: [Int!]
+  steals_lt: Int
+  steals_lte: Int
+  steals_gt: Int
+  steals_gte: Int
+  blocks: Int
+  blocks_not: Int
+  blocks_in: [Int!]
+  blocks_not_in: [Int!]
+  blocks_lt: Int
+  blocks_lte: Int
+  blocks_gt: Int
+  blocks_gte: Int
+  turnovers: Int
+  turnovers_not: Int
+  turnovers_in: [Int!]
+  turnovers_not_in: [Int!]
+  turnovers_lt: Int
+  turnovers_lte: Int
+  turnovers_gt: Int
+  turnovers_gte: Int
+  plusMinus: Int
+  plusMinus_not: Int
+  plusMinus_in: [Int!]
+  plusMinus_not_in: [Int!]
+  plusMinus_lt: Int
+  plusMinus_lte: Int
+  plusMinus_gt: Int
+  plusMinus_gte: Int
+  AND: [BoxScoreTraditionalWhereInput!]
+  OR: [BoxScoreTraditionalWhereInput!]
+  NOT: [BoxScoreTraditionalWhereInput!]
+}
+
+input BoxScoreTraditionalWhereUniqueInput {
+  id: ID
+}
+
+scalar DateTime
+
+type Game {
+  id: ID!
+  player: Player!
+  nbaGameId: String!
+  season: String!
+  result: String!
+  date: DateTime!
+  home: Boolean!
+  team: Team!
+  opponent: Team!
+  BoxScoreTraditional: BoxScoreTraditional
+  BoxScoreAdvanced: BoxScoreAdvanced
+}
+
+type GameConnection {
+  pageInfo: PageInfo!
+  edges: [GameEdge]!
+  aggregate: AggregateGame!
+}
+
+input GameCreateInput {
+  player: PlayerCreateOneWithoutGamesInput!
+  nbaGameId: String!
+  season: String!
+  result: String!
+  date: DateTime!
+  home: Boolean!
+  team: TeamCreateOneWithoutGameInput!
+  opponent: TeamCreateOneWithoutOpponentInput!
+  BoxScoreTraditional: BoxScoreTraditionalCreateOneWithoutGameInput
+  BoxScoreAdvanced: BoxScoreAdvancedCreateOneWithoutGameInput
+}
+
+input GameCreateManyWithoutPlayerInput {
+  create: [GameCreateWithoutPlayerInput!]
+  connect: [GameWhereUniqueInput!]
+}
+
+input GameCreateOneWithoutBoxScoreAdvancedInput {
+  create: GameCreateWithoutBoxScoreAdvancedInput
+  connect: GameWhereUniqueInput
+}
+
+input GameCreateOneWithoutBoxScoreTraditionalInput {
+  create: GameCreateWithoutBoxScoreTraditionalInput
+  connect: GameWhereUniqueInput
+}
+
+input GameCreateOneWithoutOpponentInput {
+  create: GameCreateWithoutOpponentInput
+  connect: GameWhereUniqueInput
+}
+
+input GameCreateOneWithoutTeamInput {
+  create: GameCreateWithoutTeamInput
+  connect: GameWhereUniqueInput
+}
+
+input GameCreateWithoutBoxScoreAdvancedInput {
+  player: PlayerCreateOneWithoutGamesInput!
+  nbaGameId: String!
+  season: String!
+  result: String!
+  date: DateTime!
+  home: Boolean!
+  team: TeamCreateOneWithoutGameInput!
+  opponent: TeamCreateOneWithoutOpponentInput!
+  BoxScoreTraditional: BoxScoreTraditionalCreateOneWithoutGameInput
+}
+
+input GameCreateWithoutBoxScoreTraditionalInput {
+  player: PlayerCreateOneWithoutGamesInput!
+  nbaGameId: String!
+  season: String!
+  result: String!
+  date: DateTime!
+  home: Boolean!
+  team: TeamCreateOneWithoutGameInput!
+  opponent: TeamCreateOneWithoutOpponentInput!
+  BoxScoreAdvanced: BoxScoreAdvancedCreateOneWithoutGameInput
+}
+
+input GameCreateWithoutOpponentInput {
+  player: PlayerCreateOneWithoutGamesInput!
+  nbaGameId: String!
+  season: String!
+  result: String!
+  date: DateTime!
+  home: Boolean!
+  team: TeamCreateOneWithoutGameInput!
+  BoxScoreTraditional: BoxScoreTraditionalCreateOneWithoutGameInput
+  BoxScoreAdvanced: BoxScoreAdvancedCreateOneWithoutGameInput
+}
+
+input GameCreateWithoutPlayerInput {
+  nbaGameId: String!
+  season: String!
+  result: String!
+  date: DateTime!
+  home: Boolean!
+  team: TeamCreateOneWithoutGameInput!
+  opponent: TeamCreateOneWithoutOpponentInput!
+  BoxScoreTraditional: BoxScoreTraditionalCreateOneWithoutGameInput
+  BoxScoreAdvanced: BoxScoreAdvancedCreateOneWithoutGameInput
+}
+
+input GameCreateWithoutTeamInput {
+  player: PlayerCreateOneWithoutGamesInput!
+  nbaGameId: String!
+  season: String!
+  result: String!
+  date: DateTime!
+  home: Boolean!
+  opponent: TeamCreateOneWithoutOpponentInput!
+  BoxScoreTraditional: BoxScoreTraditionalCreateOneWithoutGameInput
+  BoxScoreAdvanced: BoxScoreAdvancedCreateOneWithoutGameInput
+}
+
+type GameEdge {
+  node: Game!
+  cursor: String!
+}
+
+enum GameOrderByInput {
+  id_ASC
+  id_DESC
+  nbaGameId_ASC
+  nbaGameId_DESC
+  season_ASC
+  season_DESC
+  result_ASC
+  result_DESC
+  date_ASC
+  date_DESC
+  home_ASC
+  home_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type GamePreviousValues {
+  id: ID!
+  nbaGameId: String!
+  season: String!
+  result: String!
+  date: DateTime!
+  home: Boolean!
+}
+
+type GameSubscriptionPayload {
+  mutation: MutationType!
+  node: Game
+  updatedFields: [String!]
+  previousValues: GamePreviousValues
+}
+
+input GameSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: GameWhereInput
+  AND: [GameSubscriptionWhereInput!]
+  OR: [GameSubscriptionWhereInput!]
+  NOT: [GameSubscriptionWhereInput!]
+}
+
+input GameUpdateInput {
+  player: PlayerUpdateOneRequiredWithoutGamesInput
+  nbaGameId: String
+  season: String
+  result: String
+  date: DateTime
+  home: Boolean
+  team: TeamUpdateOneRequiredWithoutGameInput
+  opponent: TeamUpdateOneRequiredWithoutOpponentInput
+  BoxScoreTraditional: BoxScoreTraditionalUpdateOneWithoutGameInput
+  BoxScoreAdvanced: BoxScoreAdvancedUpdateOneWithoutGameInput
+}
+
+input GameUpdateManyWithoutPlayerInput {
+  create: [GameCreateWithoutPlayerInput!]
+  delete: [GameWhereUniqueInput!]
+  connect: [GameWhereUniqueInput!]
+  disconnect: [GameWhereUniqueInput!]
+  update: [GameUpdateWithWhereUniqueWithoutPlayerInput!]
+  upsert: [GameUpsertWithWhereUniqueWithoutPlayerInput!]
+}
+
+input GameUpdateOneRequiredWithoutBoxScoreAdvancedInput {
+  create: GameCreateWithoutBoxScoreAdvancedInput
+  update: GameUpdateWithoutBoxScoreAdvancedDataInput
+  upsert: GameUpsertWithoutBoxScoreAdvancedInput
+  connect: GameWhereUniqueInput
+}
+
+input GameUpdateOneRequiredWithoutBoxScoreTraditionalInput {
+  create: GameCreateWithoutBoxScoreTraditionalInput
+  update: GameUpdateWithoutBoxScoreTraditionalDataInput
+  upsert: GameUpsertWithoutBoxScoreTraditionalInput
+  connect: GameWhereUniqueInput
+}
+
+input GameUpdateOneRequiredWithoutOpponentInput {
+  create: GameCreateWithoutOpponentInput
+  update: GameUpdateWithoutOpponentDataInput
+  upsert: GameUpsertWithoutOpponentInput
+  connect: GameWhereUniqueInput
+}
+
+input GameUpdateOneRequiredWithoutTeamInput {
+  create: GameCreateWithoutTeamInput
+  update: GameUpdateWithoutTeamDataInput
+  upsert: GameUpsertWithoutTeamInput
+  connect: GameWhereUniqueInput
+}
+
+input GameUpdateWithoutBoxScoreAdvancedDataInput {
+  player: PlayerUpdateOneRequiredWithoutGamesInput
+  nbaGameId: String
+  season: String
+  result: String
+  date: DateTime
+  home: Boolean
+  team: TeamUpdateOneRequiredWithoutGameInput
+  opponent: TeamUpdateOneRequiredWithoutOpponentInput
+  BoxScoreTraditional: BoxScoreTraditionalUpdateOneWithoutGameInput
+}
+
+input GameUpdateWithoutBoxScoreTraditionalDataInput {
+  player: PlayerUpdateOneRequiredWithoutGamesInput
+  nbaGameId: String
+  season: String
+  result: String
+  date: DateTime
+  home: Boolean
+  team: TeamUpdateOneRequiredWithoutGameInput
+  opponent: TeamUpdateOneRequiredWithoutOpponentInput
+  BoxScoreAdvanced: BoxScoreAdvancedUpdateOneWithoutGameInput
+}
+
+input GameUpdateWithoutOpponentDataInput {
+  player: PlayerUpdateOneRequiredWithoutGamesInput
+  nbaGameId: String
+  season: String
+  result: String
+  date: DateTime
+  home: Boolean
+  team: TeamUpdateOneRequiredWithoutGameInput
+  BoxScoreTraditional: BoxScoreTraditionalUpdateOneWithoutGameInput
+  BoxScoreAdvanced: BoxScoreAdvancedUpdateOneWithoutGameInput
+}
+
+input GameUpdateWithoutPlayerDataInput {
+  nbaGameId: String
+  season: String
+  result: String
+  date: DateTime
+  home: Boolean
+  team: TeamUpdateOneRequiredWithoutGameInput
+  opponent: TeamUpdateOneRequiredWithoutOpponentInput
+  BoxScoreTraditional: BoxScoreTraditionalUpdateOneWithoutGameInput
+  BoxScoreAdvanced: BoxScoreAdvancedUpdateOneWithoutGameInput
+}
+
+input GameUpdateWithoutTeamDataInput {
+  player: PlayerUpdateOneRequiredWithoutGamesInput
+  nbaGameId: String
+  season: String
+  result: String
+  date: DateTime
+  home: Boolean
+  opponent: TeamUpdateOneRequiredWithoutOpponentInput
+  BoxScoreTraditional: BoxScoreTraditionalUpdateOneWithoutGameInput
+  BoxScoreAdvanced: BoxScoreAdvancedUpdateOneWithoutGameInput
+}
+
+input GameUpdateWithWhereUniqueWithoutPlayerInput {
+  where: GameWhereUniqueInput!
+  data: GameUpdateWithoutPlayerDataInput!
+}
+
+input GameUpsertWithoutBoxScoreAdvancedInput {
+  update: GameUpdateWithoutBoxScoreAdvancedDataInput!
+  create: GameCreateWithoutBoxScoreAdvancedInput!
+}
+
+input GameUpsertWithoutBoxScoreTraditionalInput {
+  update: GameUpdateWithoutBoxScoreTraditionalDataInput!
+  create: GameCreateWithoutBoxScoreTraditionalInput!
+}
+
+input GameUpsertWithoutOpponentInput {
+  update: GameUpdateWithoutOpponentDataInput!
+  create: GameCreateWithoutOpponentInput!
+}
+
+input GameUpsertWithoutTeamInput {
+  update: GameUpdateWithoutTeamDataInput!
+  create: GameCreateWithoutTeamInput!
+}
+
+input GameUpsertWithWhereUniqueWithoutPlayerInput {
+  where: GameWhereUniqueInput!
+  update: GameUpdateWithoutPlayerDataInput!
+  create: GameCreateWithoutPlayerInput!
+}
+
+input GameWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  player: PlayerWhereInput
+  nbaGameId: String
+  nbaGameId_not: String
+  nbaGameId_in: [String!]
+  nbaGameId_not_in: [String!]
+  nbaGameId_lt: String
+  nbaGameId_lte: String
+  nbaGameId_gt: String
+  nbaGameId_gte: String
+  nbaGameId_contains: String
+  nbaGameId_not_contains: String
+  nbaGameId_starts_with: String
+  nbaGameId_not_starts_with: String
+  nbaGameId_ends_with: String
+  nbaGameId_not_ends_with: String
+  season: String
+  season_not: String
+  season_in: [String!]
+  season_not_in: [String!]
+  season_lt: String
+  season_lte: String
+  season_gt: String
+  season_gte: String
+  season_contains: String
+  season_not_contains: String
+  season_starts_with: String
+  season_not_starts_with: String
+  season_ends_with: String
+  season_not_ends_with: String
+  result: String
+  result_not: String
+  result_in: [String!]
+  result_not_in: [String!]
+  result_lt: String
+  result_lte: String
+  result_gt: String
+  result_gte: String
+  result_contains: String
+  result_not_contains: String
+  result_starts_with: String
+  result_not_starts_with: String
+  result_ends_with: String
+  result_not_ends_with: String
+  date: DateTime
+  date_not: DateTime
+  date_in: [DateTime!]
+  date_not_in: [DateTime!]
+  date_lt: DateTime
+  date_lte: DateTime
+  date_gt: DateTime
+  date_gte: DateTime
+  home: Boolean
+  home_not: Boolean
+  team: TeamWhereInput
+  opponent: TeamWhereInput
+  BoxScoreTraditional: BoxScoreTraditionalWhereInput
+  BoxScoreAdvanced: BoxScoreAdvancedWhereInput
+  AND: [GameWhereInput!]
+  OR: [GameWhereInput!]
+  NOT: [GameWhereInput!]
+}
+
+input GameWhereUniqueInput {
+  id: ID
+}
+
+scalar Long
+
+type Mutation {
+  createBoxScoreAdvanced(data: BoxScoreAdvancedCreateInput!): BoxScoreAdvanced!
+  updateBoxScoreAdvanced(data: BoxScoreAdvancedUpdateInput!, where: BoxScoreAdvancedWhereUniqueInput!): BoxScoreAdvanced
+  updateManyBoxScoreAdvanceds(data: BoxScoreAdvancedUpdateInput!, where: BoxScoreAdvancedWhereInput): BatchPayload!
+  upsertBoxScoreAdvanced(where: BoxScoreAdvancedWhereUniqueInput!, create: BoxScoreAdvancedCreateInput!, update: BoxScoreAdvancedUpdateInput!): BoxScoreAdvanced!
+  deleteBoxScoreAdvanced(where: BoxScoreAdvancedWhereUniqueInput!): BoxScoreAdvanced
+  deleteManyBoxScoreAdvanceds(where: BoxScoreAdvancedWhereInput): BatchPayload!
+  createBoxScoreTraditional(data: BoxScoreTraditionalCreateInput!): BoxScoreTraditional!
+  updateBoxScoreTraditional(data: BoxScoreTraditionalUpdateInput!, where: BoxScoreTraditionalWhereUniqueInput!): BoxScoreTraditional
+  updateManyBoxScoreTraditionals(data: BoxScoreTraditionalUpdateInput!, where: BoxScoreTraditionalWhereInput): BatchPayload!
+  upsertBoxScoreTraditional(where: BoxScoreTraditionalWhereUniqueInput!, create: BoxScoreTraditionalCreateInput!, update: BoxScoreTraditionalUpdateInput!): BoxScoreTraditional!
+  deleteBoxScoreTraditional(where: BoxScoreTraditionalWhereUniqueInput!): BoxScoreTraditional
+  deleteManyBoxScoreTraditionals(where: BoxScoreTraditionalWhereInput): BatchPayload!
+  createGame(data: GameCreateInput!): Game!
+  updateGame(data: GameUpdateInput!, where: GameWhereUniqueInput!): Game
+  updateManyGames(data: GameUpdateInput!, where: GameWhereInput): BatchPayload!
+  upsertGame(where: GameWhereUniqueInput!, create: GameCreateInput!, update: GameUpdateInput!): Game!
+  deleteGame(where: GameWhereUniqueInput!): Game
+  deleteManyGames(where: GameWhereInput): BatchPayload!
+  createPlayer(data: PlayerCreateInput!): Player!
+  updatePlayer(data: PlayerUpdateInput!, where: PlayerWhereUniqueInput!): Player
+  updateManyPlayers(data: PlayerUpdateInput!, where: PlayerWhereInput): BatchPayload!
+  upsertPlayer(where: PlayerWhereUniqueInput!, create: PlayerCreateInput!, update: PlayerUpdateInput!): Player!
+  deletePlayer(where: PlayerWhereUniqueInput!): Player
+  deleteManyPlayers(where: PlayerWhereInput): BatchPayload!
+  createTeam(data: TeamCreateInput!): Team!
+  updateTeam(data: TeamUpdateInput!, where: TeamWhereUniqueInput!): Team
+  updateManyTeams(data: TeamUpdateInput!, where: TeamWhereInput): BatchPayload!
+  upsertTeam(where: TeamWhereUniqueInput!, create: TeamCreateInput!, update: TeamUpdateInput!): Team!
+  deleteTeam(where: TeamWhereUniqueInput!): Team
+  deleteManyTeams(where: TeamWhereInput): BatchPayload!
+}
+
+enum MutationType {
+  CREATED
+  UPDATED
+  DELETED
+}
+
+interface Node {
+  id: ID!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+type Player {
+  id: ID!
+  nbaStatsId: Int!
+  name: String!
+  Games(where: GameWhereInput, orderBy: GameOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Game!]
+}
+
+type PlayerConnection {
+  pageInfo: PageInfo!
+  edges: [PlayerEdge]!
+  aggregate: AggregatePlayer!
+}
+
+input PlayerCreateInput {
+  nbaStatsId: Int!
+  name: String!
+  Games: GameCreateManyWithoutPlayerInput
+}
+
+input PlayerCreateOneWithoutGamesInput {
+  create: PlayerCreateWithoutGamesInput
+  connect: PlayerWhereUniqueInput
+}
+
+input PlayerCreateWithoutGamesInput {
+  nbaStatsId: Int!
+  name: String!
+}
+
+type PlayerEdge {
+  node: Player!
+  cursor: String!
+}
+
+enum PlayerOrderByInput {
+  id_ASC
+  id_DESC
+  nbaStatsId_ASC
+  nbaStatsId_DESC
+  name_ASC
+  name_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type PlayerPreviousValues {
+  id: ID!
+  nbaStatsId: Int!
+  name: String!
+}
+
+type PlayerSubscriptionPayload {
+  mutation: MutationType!
+  node: Player
+  updatedFields: [String!]
+  previousValues: PlayerPreviousValues
+}
+
+input PlayerSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: PlayerWhereInput
+  AND: [PlayerSubscriptionWhereInput!]
+  OR: [PlayerSubscriptionWhereInput!]
+  NOT: [PlayerSubscriptionWhereInput!]
+}
+
+input PlayerUpdateInput {
+  nbaStatsId: Int
+  name: String
+  Games: GameUpdateManyWithoutPlayerInput
+}
+
+input PlayerUpdateOneRequiredWithoutGamesInput {
+  create: PlayerCreateWithoutGamesInput
+  update: PlayerUpdateWithoutGamesDataInput
+  upsert: PlayerUpsertWithoutGamesInput
+  connect: PlayerWhereUniqueInput
+}
+
+input PlayerUpdateWithoutGamesDataInput {
+  nbaStatsId: Int
+  name: String
+}
+
+input PlayerUpsertWithoutGamesInput {
+  update: PlayerUpdateWithoutGamesDataInput!
+  create: PlayerCreateWithoutGamesInput!
+}
+
+input PlayerWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  nbaStatsId: Int
+  nbaStatsId_not: Int
+  nbaStatsId_in: [Int!]
+  nbaStatsId_not_in: [Int!]
+  nbaStatsId_lt: Int
+  nbaStatsId_lte: Int
+  nbaStatsId_gt: Int
+  nbaStatsId_gte: Int
+  name: String
+  name_not: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  Games_every: GameWhereInput
+  Games_some: GameWhereInput
+  Games_none: GameWhereInput
+  AND: [PlayerWhereInput!]
+  OR: [PlayerWhereInput!]
+  NOT: [PlayerWhereInput!]
+}
+
+input PlayerWhereUniqueInput {
+  id: ID
+  nbaStatsId: Int
+}
+
+type Query {
+  boxScoreAdvanced(where: BoxScoreAdvancedWhereUniqueInput!): BoxScoreAdvanced
+  boxScoreAdvanceds(where: BoxScoreAdvancedWhereInput, orderBy: BoxScoreAdvancedOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [BoxScoreAdvanced]!
+  boxScoreAdvancedsConnection(where: BoxScoreAdvancedWhereInput, orderBy: BoxScoreAdvancedOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): BoxScoreAdvancedConnection!
+  boxScoreTraditional(where: BoxScoreTraditionalWhereUniqueInput!): BoxScoreTraditional
+  boxScoreTraditionals(where: BoxScoreTraditionalWhereInput, orderBy: BoxScoreTraditionalOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [BoxScoreTraditional]!
+  boxScoreTraditionalsConnection(where: BoxScoreTraditionalWhereInput, orderBy: BoxScoreTraditionalOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): BoxScoreTraditionalConnection!
+  game(where: GameWhereUniqueInput!): Game
+  games(where: GameWhereInput, orderBy: GameOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Game]!
+  gamesConnection(where: GameWhereInput, orderBy: GameOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): GameConnection!
+  player(where: PlayerWhereUniqueInput!): Player
+  players(where: PlayerWhereInput, orderBy: PlayerOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Player]!
+  playersConnection(where: PlayerWhereInput, orderBy: PlayerOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): PlayerConnection!
+  team(where: TeamWhereUniqueInput!): Team
+  teams(where: TeamWhereInput, orderBy: TeamOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Team]!
+  teamsConnection(where: TeamWhereInput, orderBy: TeamOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): TeamConnection!
+  node(id: ID!): Node
+}
+
+type Subscription {
+  boxScoreAdvanced(where: BoxScoreAdvancedSubscriptionWhereInput): BoxScoreAdvancedSubscriptionPayload
+  boxScoreTraditional(where: BoxScoreTraditionalSubscriptionWhereInput): BoxScoreTraditionalSubscriptionPayload
+  game(where: GameSubscriptionWhereInput): GameSubscriptionPayload
+  player(where: PlayerSubscriptionWhereInput): PlayerSubscriptionPayload
+  team(where: TeamSubscriptionWhereInput): TeamSubscriptionPayload
+}
+
+type Team {
+  id: ID!
+  nbaStatsId: Int!
+  name: String!
+  conference: String!
+  game: Game!
+  opponent: Game!
+}
+
+type TeamConnection {
+  pageInfo: PageInfo!
+  edges: [TeamEdge]!
+  aggregate: AggregateTeam!
+}
+
+input TeamCreateInput {
+  nbaStatsId: Int!
+  name: String!
+  conference: String!
+  game: GameCreateOneWithoutTeamInput!
+  opponent: GameCreateOneWithoutOpponentInput!
+}
+
+input TeamCreateOneWithoutGameInput {
+  create: TeamCreateWithoutGameInput
+  connect: TeamWhereUniqueInput
+}
+
+input TeamCreateOneWithoutOpponentInput {
+  create: TeamCreateWithoutOpponentInput
+  connect: TeamWhereUniqueInput
+}
+
+input TeamCreateWithoutGameInput {
+  nbaStatsId: Int!
+  name: String!
+  conference: String!
+  opponent: GameCreateOneWithoutOpponentInput!
+}
+
+input TeamCreateWithoutOpponentInput {
+  nbaStatsId: Int!
+  name: String!
+  conference: String!
+  game: GameCreateOneWithoutTeamInput!
+}
+
+type TeamEdge {
+  node: Team!
+  cursor: String!
+}
+
+enum TeamOrderByInput {
+  id_ASC
+  id_DESC
+  nbaStatsId_ASC
+  nbaStatsId_DESC
+  name_ASC
+  name_DESC
+  conference_ASC
+  conference_DESC
+  createdAt_ASC
+  createdAt_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+}
+
+type TeamPreviousValues {
+  id: ID!
+  nbaStatsId: Int!
+  name: String!
+  conference: String!
+}
+
+type TeamSubscriptionPayload {
+  mutation: MutationType!
+  node: Team
+  updatedFields: [String!]
+  previousValues: TeamPreviousValues
+}
+
+input TeamSubscriptionWhereInput {
+  mutation_in: [MutationType!]
+  updatedFields_contains: String
+  updatedFields_contains_every: [String!]
+  updatedFields_contains_some: [String!]
+  node: TeamWhereInput
+  AND: [TeamSubscriptionWhereInput!]
+  OR: [TeamSubscriptionWhereInput!]
+  NOT: [TeamSubscriptionWhereInput!]
+}
+
+input TeamUpdateInput {
+  nbaStatsId: Int
+  name: String
+  conference: String
+  game: GameUpdateOneRequiredWithoutTeamInput
+  opponent: GameUpdateOneRequiredWithoutOpponentInput
+}
+
+input TeamUpdateOneRequiredWithoutGameInput {
+  create: TeamCreateWithoutGameInput
+  update: TeamUpdateWithoutGameDataInput
+  upsert: TeamUpsertWithoutGameInput
+  connect: TeamWhereUniqueInput
+}
+
+input TeamUpdateOneRequiredWithoutOpponentInput {
+  create: TeamCreateWithoutOpponentInput
+  update: TeamUpdateWithoutOpponentDataInput
+  upsert: TeamUpsertWithoutOpponentInput
+  connect: TeamWhereUniqueInput
+}
+
+input TeamUpdateWithoutGameDataInput {
+  nbaStatsId: Int
+  name: String
+  conference: String
+  opponent: GameUpdateOneRequiredWithoutOpponentInput
+}
+
+input TeamUpdateWithoutOpponentDataInput {
+  nbaStatsId: Int
+  name: String
+  conference: String
+  game: GameUpdateOneRequiredWithoutTeamInput
+}
+
+input TeamUpsertWithoutGameInput {
+  update: TeamUpdateWithoutGameDataInput!
+  create: TeamCreateWithoutGameInput!
+}
+
+input TeamUpsertWithoutOpponentInput {
+  update: TeamUpdateWithoutOpponentDataInput!
+  create: TeamCreateWithoutOpponentInput!
+}
+
+input TeamWhereInput {
+  id: ID
+  id_not: ID
+  id_in: [ID!]
+  id_not_in: [ID!]
+  id_lt: ID
+  id_lte: ID
+  id_gt: ID
+  id_gte: ID
+  id_contains: ID
+  id_not_contains: ID
+  id_starts_with: ID
+  id_not_starts_with: ID
+  id_ends_with: ID
+  id_not_ends_with: ID
+  nbaStatsId: Int
+  nbaStatsId_not: Int
+  nbaStatsId_in: [Int!]
+  nbaStatsId_not_in: [Int!]
+  nbaStatsId_lt: Int
+  nbaStatsId_lte: Int
+  nbaStatsId_gt: Int
+  nbaStatsId_gte: Int
+  name: String
+  name_not: String
+  name_in: [String!]
+  name_not_in: [String!]
+  name_lt: String
+  name_lte: String
+  name_gt: String
+  name_gte: String
+  name_contains: String
+  name_not_contains: String
+  name_starts_with: String
+  name_not_starts_with: String
+  name_ends_with: String
+  name_not_ends_with: String
+  conference: String
+  conference_not: String
+  conference_in: [String!]
+  conference_not_in: [String!]
+  conference_lt: String
+  conference_lte: String
+  conference_gt: String
+  conference_gte: String
+  conference_contains: String
+  conference_not_contains: String
+  conference_starts_with: String
+  conference_not_starts_with: String
+  conference_ends_with: String
+  conference_not_ends_with: String
+  game: GameWhereInput
+  opponent: GameWhereInput
+  AND: [TeamWhereInput!]
+  OR: [TeamWhereInput!]
+  NOT: [TeamWhereInput!]
+}
+
+input TeamWhereUniqueInput {
+  id: ID
+  nbaStatsId: Int
+}

@@ -1,0 +1,29 @@
+mutation {                    
+    CreateBoxScoreAdvanced(                    
+    nbaStatsId: \\"2544\\",                    
+    nbaGameId: \\"0021701220\\",                    
+    box: {         
+        create: {            
+            offensiveRating: 87,            
+            defensiveRating: 65.2,            
+            netRating: 21.7,            
+            assistPercentage: 0.4,            
+            assistToTurnovers: 0.67,            
+            assistRatio: 13.3,            
+            offensiveReboundPercentage: 0.071,            
+            defensiveReboundPercentage: 0.25,            
+            reboundPercentage: 0.167,            
+            effectiveFieldGoalPercentage: 0.444,            
+            trueShootingPercentage: 0.484,            
+            usagePercentage: 0.448,            
+            pace: 104.64,            
+            PIE: 0.27        
+        }    
+    }) 
+    {                        
+        boxScoreAdvanced 
+        {                        
+            PIE                        
+            }                    
+    }                
+}

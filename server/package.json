@@ -1,0 +1,25 @@
+{
+  "name": "nbalog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "npm-run-all --parallel start playground",
+    "playground": "graphql playground"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bull": "^3.4.8",
+    "bull-arena": "^2.5.0",
+    "graphql-yoga": "^1.16.2",
+    "prisma-binding": "^2.1.6",
+    "prisma-client-lib": "^1.27.4"
+  },
+  "devDependencies": {
+    "graphql-cli": "^2.16.7",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "npm-run-all": "^4.1.3"
+  }
+}

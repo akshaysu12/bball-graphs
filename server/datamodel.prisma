@@ -1,0 +1,71 @@
+type Player {
+    id: ID! @unique
+    nbaStatsId: Int! @unique
+    name: String!
+    seasons: [String]
+    Games: [Game!]! @relation(name: "Games", onDelete: CASCADE)
+}
+
+type Game {
+    id: ID! @unique
+    player: Player! @relation(name: "Games")
+    nbaGameId: String! @unique
+    season: String!
+    result: String!
+    date: DateTime!
+    home: Boolean! 
+    team: Team! @relation(name: "Team")
+    opponent: Team! @relation(name: "Opponent")
+    boxScoreTraditional: BoxScoreTraditional @relation(name: "BoxScoreTraditional", onDelete: CASCADE)
+    boxScoreAdvanced: BoxScoreAdvanced @relation(name: "BoxScoreAdvanced", onDelete: CASCADE)
+}
+
+type Team {
+    id: ID! @unique
+    nbaStatsId: Int! @unique
+    name: String!
+    conference: String!
+}
+
+type BoxScoreTraditional {
+    id: ID! @unique
+    game: Game! @relation(name: "BoxScoreTraditional")
+    points: Int!
+    minutes: Float!
+    fieldGoalsMade: Int!
+    fieldGoalsAttempted: Int!
+    fieldGoalPercentage: Float!
+    threePtsMade: Int!
+    threePtsAttempted: Int!
+    threePtPercentage: Float!
+    freeThrowsMade: Int!
+    freeThrowsAttempts: Int!
+    freeThrowsPercentage: Float!
+    rebounds: Int!
+    offensiveRebounds: Int!
+    defensiveRebounds: Int!
+    assists: Int!
+    steals: Int!
+    blocks: Int!
+    turnovers: Int! 
+    plusMinus: Int!
+}
+
+type BoxScoreAdvanced {
+    id: ID! @unique
+    game: Game! @relation(name: "BoxScoreAdvanced")
+    offensiveRating: Float
+    defensiveRating: Float
+    netRating: Float
+    assistPercentage: Float
+    assistToTurnovers: Float
+    assistRatio: Float
+    offensiveReboundPercentage: Float
+    defensiveReboundPercentage: Float
+    reboundPercentage: Float
+    effectiveFieldGoalPercentage: Float
+    trueShootingPercentage: Float
+    usagePercentage: Float
+    pace: Float
+    PIE: Float
+}

@@ -1,0 +1,20 @@
+# import Player, Team, Game, BoxScoreTraditionalCreateOneWithoutGameInput, BoxScoreAdvancedCreateOneWithoutGameInput from "./generated/prisma.graphql"
+
+type Query {
+    Players(filter: String): [Player]!
+    Teams: [Team!]!
+}
+
+type Mutation {
+    Player(nbaStatsId: Int!, name: String!) : Player!
+    
+    CreateGame(nbaStatsId: Int!, nbaGameId: String!, season: String!, date: DateTime!, result: String!, home: Boolean!, team: String!, opponent: String!, box: BoxScoreTraditionalCreateOneWithoutGameInput!) : Game!
+    CreateBoxScoreAdvanced(nbaStatsId: Int!, nbaGameId: String!, box: BoxScoreAdvancedCreateOneWithoutGameInput!) : Game!
+    DeleteGames(filter: String!): Long!
+    DeleteBoxScoresTraditional(filter: String!): Long!
+    DeleteBoxScoresAdvanced(filter: String!): Long!
+
+
+    Team(nbaStatsId: Int!, name: String!, conference: String!): Team!
+    Teams(teams: [TeamCreateInput!]!): [Team!]!
+}
